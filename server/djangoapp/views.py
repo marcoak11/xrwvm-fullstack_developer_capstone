@@ -113,7 +113,7 @@ def get_dealer_details(request, dealer_id):
         dealership = get_request(endpoint)
         return JsonResponse({"status": 200, "dealer": dealership})
     else:
-        return JsonResponse({"status":400, "message":"Bad Request"})
+        return JsonResponse({"status": 400, "message": "Bad Request"})
 
 
 # Create a `add_review` view to submit a review
@@ -136,7 +136,7 @@ def add_review(request):
         data = json.loads(request.body)
         try:
             post_review(data)
-            return JsonResponse({"status":200})
+            return JsonResponse({"status": 200})
         except Exception:
             return JsonResponse(
                 {"status": 401, "message": "Error in posting review"}
