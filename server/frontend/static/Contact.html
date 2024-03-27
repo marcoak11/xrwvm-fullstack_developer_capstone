@@ -35,8 +35,15 @@
         <div class="columnImage">
             <img class="image" style="width: 70%;" src="/static/carsAbout.jpg" alt="About image">
         </div>
+        <script>
+            function show_alert()
+            {
+                alert('Infos sent!')
+                return false;
+            }
+        </script>
         <div class="columnDiv">
-            <form action="/action_page.php" style="box-sizing: border-box;">
+            <form name="contactsForm" onSubmit="event.preventDefault(); show_alert();" style="box-sizing: border-box;">
                 <label for="fname">First Name</label>
                 <input type="text" id="fname" name="firstname" placeholder="Your name..">
                 <label for="lname">Last Name</label>
